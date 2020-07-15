@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { getPlaysets } from './api/playset';
+import { getPlaysets, getPlaysetById } from './api/playset';
 
 function App() {
   useEffect(() => {
-    getPlaysets().then(res => console.log(res));
+    getPlaysetById("5edee3225250cd4cfc36c13b").then(res => console.log(res));
   }, [])
 
   return (

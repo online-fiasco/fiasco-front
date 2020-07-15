@@ -12,3 +12,11 @@ export const getPlaysets = async (keyword?: string): Promise<Playset[]> => {
 
   return res.data.result;
 };
+
+export const getPlaysetById = async (id: string): Promise<Playset> => {
+  const res = await axios.get(
+    `${process.env.REACT_APP_API_ROOT_URI}/v1/playset/${id}`
+  );
+
+  return res.data.result;
+};
