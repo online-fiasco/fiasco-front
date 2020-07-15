@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { getPlaysets } from './api/playset';
 
 function App() {
+  useEffect(() => {
+    getPlaysets().then(res => console.log(res));
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
